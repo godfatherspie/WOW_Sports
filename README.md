@@ -44,11 +44,4 @@ npm start
 
 > Ensure SQLite is installed and database is initialized as required.
 
-
 ---
-
-## 🙋‍♂️ Usage Guide
-
-2. **Coach Login** – View assigned sessions, mark attendance
-3. **User View** – Book sessions, view schedule and academy info
-
