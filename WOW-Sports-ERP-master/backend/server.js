@@ -14,17 +14,18 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
+const path = require('path');
+const dbPath = path.join(__dirname, 'wow_sports_fitness.db');
 
 // Connect to SQLite database
-const db = new sqlite3.Database('var/www/html/firstapp/backend/wow_sports_fitness.db', (err) =>
-    
-     {
+const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Error connecting to SQLite database:', err.message);
         process.exit(1);
     }
     console.log('Connected to the SQLite database.');
 });
+
 
 // Base Route
 app.get('/', (req, res) => {
